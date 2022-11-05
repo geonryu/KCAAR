@@ -1,0 +1,55 @@
+{% extends 'admin.html' %}
+
+{% block content %}
+  <div class="dashboard">
+    <div class="wrap">
+      <table class="qna">
+        <tr>
+          <th>의뢰자명</th>
+          <th>담당자명</th>
+          <th>연락처</th>
+          <th>Email</th>
+          <th>모델명</th>
+          <th>소프트웨어명</th>
+          <th>상세내용</th>
+        </tr>
+        {% for data in requests %}
+        <tr>
+          <td>{{ data.clientCompany }}</td>
+          <td>{{ data.clientName }}</td>
+          <td>{{ data.clientPhone }}</td>
+          <td>{{ data.clientEmail }}</td>
+          <td>{{ data.deviceName }}</td>
+          <td>{{ data.softwareName }}</td>
+          <td>
+            <form action="/admin/contactAdmin/preview/{{data.id}}" method="get">
+              <button type="submit" data-id="{{ data.id }}" onclick="viewDetails()">상세보기</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+      <script>
+        const viewDetails = (el) => {
+          // const getData = el.getAttribute('data-id');
+          // const formData = new FormData();
+          // axios.get(`/admin/contactAdmin/preview/${getData}`)
+          // .then((res) => {
+          //   document.getElementById('img-url').value = res.data.url;
+          //   document.getElementById('img-preview').src = res.data.url;
+          //   document.getElementById('img-preview').style.display = 'inline';
+          // })
+          // .catch((err) => {
+          //   console.error(err);
+          // });
+        }
+      </script>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll(".navi li").forEach(function(list) {
+      list.classList.remove("on");
+    })
+    document.querySelector(".navi li:nth-child(3)").classList.add("on");
+  </script>
+{% endblock %}

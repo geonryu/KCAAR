@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="naver-site-verification" content="48afc92b605bc20e8d91af7ced284ffe8ee01604" />
+        <meta name="description" content="한국접근성평가연구원">
+        <meta property="og:type" content="website"> 
+        <meta property="og:title" content="한국접근성평가연구원">
+        <meta property="og:description" content="한국접근성평가연구원">
+        <meta property="og:image" content="https://kcaa.re.kr/images/logo.png">
+        <meta property="og:url" content="www.kcaa.re.kr">
+        <meta
+        name="keywords"
+        content="한국접근성평가연구원, 접근성평가, 접근성, 웹접근성, web accessibility, accessibility, 키오스크접근성, 사용성, 사용성평가, 접근성연구원, 접근성 연구, 키오스크개발, 키오스크평가"
+        />
+        <title>한국접근성평가연구원</title>
+        <link rel="canonical" href="/">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="/common.css">
+        <link rel="stylesheet" href="/app.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/center.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="/js/main.js"></script>
+    </head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="wrap">
+                <h1><a href="/"><img src="/images/logo.png" alt="한국접근성평가연구원"></a></h1>
+                <nav>
+                    <ul class="navigation">
+                        <li><a href="/accessibilities">접근성소개</a></li>
+                        <li class="on"><a href="/center">연구원소개</a></li>
+                        <li><a href="/library">자료실</a></li>
+                        <li><a href="/contact">문의하기</a></li>
+                    </ul>
+                    <div class="utilities">
+                        {% if user and user.id %}
+                            <div class="sign">
+                                <div>{{'안녕하세요! ' + user.userName + '님'}}</div>
+                                <div class="sign-out"><a href="/auth/logout">로그아웃</a></div>
+                            </div>
+                        {% else %}
+                            <ul class="sign">
+                                <li class="sign-in"><a href="/login">로그인</a></li>
+                                <li class="sign-up"><a href="/join">회원가입</a></li>
+                            </ul>
+                        {% endif %}
+                        <div class="toggle-viewmode" onclick="alert(`서비스 준비중입니다.`)">
+                            <button class="btn-toggle-viewmode"><span class="material-symbols-outlined symbols">bedtime</span>야간모드</button>
+                        </div>
+                    </div>
+                </nav>
+                <button class="btn-nav-opn" onclick="navBtnAnim()">
+                    <span></span>
+                </button>
+                <script>
+                    const navBtnAnim = () => {
+                        const navBtn = document.querySelector(".btn-nav-opn");
+                        const nav = document.querySelector("nav");
+                        navBtn.classList.toggle("active");
+                        nav.classList.toggle("on")
+                    }
+                </script>
+            </div>
+        </header>
+        <div class="sec-tit">
+            <div class="wrap">
+                <div class="txt-wrap">
+                    <p class="sub-tit">ABOUT US</p>
+                    <h2>한국접근성평가연구원 소개</h2>
+                    <div class="desc">
+                        접근성에 관한 독보적인 인사이트를 바탕으로 모든 사용자를 위해 최적화된 접근성을 연구하고 올바른 방향성을 선도합니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <section class="sec-about">
+                <div class="wrap">
+                    <div class="about">
+                        <div class="txt">
+                            <h3>한국접근성평가연구원 소개</h3>
+                            <div class="desc">
+                                (사)한국접근성평가연구원은 각종 전자정보통신 제품 및 서비스의 접근성을 향상시키기 위한 기술 표준과 이를 효과적으로 시험, 평가하는 연구방법론을 개발합니다. 개발된 표준 및 방법론을 실제 제품 및 서비스에 적용하여, 그 결과를 공익적 차원에서 공개하고자 접근성 및 사용성 분야의 전문가들이 모였습니다.
+                                <br>
+                                <br>
+                                따라서 더 많은 사람들에게 전자정보통신 관련 제품과 서비스의 접근성을 보장할 수 있는 최적의 방법을 학술적으로 연구 하고 교육하기 위한 구체적인 방법을 모색하여, 궁극적으로는 우리나라의 장애인과 고령자의 삶의 질 향상을 목적으로 설립되었습니다.
+                            </div>
+                        </div>
+                        <div class="pic">
+                            <img src="/images/kcara-lab.jpg" alt="한국접근성">
+                        </div>
+                    </div>
+                    <div class="todo">
+                        <div class="txt">
+                            <h3>한국접근성평가연구원는 어떤 일을 하나요?</h3>
+                            <div class="desc">한국접근성평가연구원은 가전제품이나 전자정보통신 제품 및 서비스 접근성의 시험 평가 방법을 연구하고 표준을 개발합니다. 접근성 분야의 연구자와 전문가가 직접 평가에 참여하여 제품과 서비스의 접근성을 평가하고 보고서를 발행합니다. 또한 제품과 서비스에 대한 접근성 진단을 토대로 접근성 관련 컨설팅과 교육을 진행하여 더 많은 사람들이 제한없이 이용할 수 있도록 최적의 방법을 제시합니다. </div>
+                        </div>
+                        <div class="pic">
+                            <div class="ico">
+                                <span class="material-symbols-outlined">engineering</span>
+                                <span class="explain">시험평가방법연구</span>
+                            </div>
+                            <div class="ico">
+                                <span class="material-symbols-outlined">checklist</span>
+                                <span class="explain">시험평가표준개발</span>
+                            </div>
+                            <div class="ico">
+                                <span class="material-symbols-outlined">receipt_long</span>
+                                <span class="explain">평가 보고서 발행</span>
+                            </div>
+                            <div class="ico">
+                                <span class="material-symbols-outlined">co_present</span>
+                                <span class="explain">접근성 컨설팅 및 교육</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sec-member">
+                <div class="wrap">
+                    <h3>조직도</h3>
+                    <ul class="org-list">
+                        <li>
+                            <div class="role">이사</div>
+                            <div class="name">이성일</div>
+                            <ul class="curr">
+                                <li>성균관대 시스템경영공학부 교수</li>
+                                <li>국가기술표준원 전문위원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="role">이사</div>
+                            <div class="name">손병창</div>
+                            <ul class="curr">
+                                <li>나사렛대 재활의료공학과 교수</li>
+                                <li>한국전자정보 통신사업진흥회 가전 접근성 표준기술위원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="role">이사</div>
+                            <div class="name">이인석</div>
+                            <ul class="curr">
+                                <li>한경대 산업시스템공학과 교수</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="role">이사</div>
+                            <div class="name">이진복</div>
+                            <ul class="curr">
+                                <li>한서대 의료복지공학과 교수</li>
+                                <li>한국전자정보 통신사업진흥회 가전 접근성 표준기술위원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="role">이사</div>
+                            <div class="name">박재현</div>
+                            <ul class="curr">
+                                <li>인천대 산업경영공학과 교수</li>
+                                <li>서울경기질병판정위원회 위원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="role">이사</div>
+                            <div class="name">김현경</div>
+                            <ul class="curr">
+                                <li>광운대 정보융합부 교수</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="role">이사</div>
+                            <div class="name">김상화</div>
+                            <ul class="curr">
+                                <li>한국ICT접근성연구센터 이사</li>
+                                <li>싸인커뮤니케이션연구소 대표</li>
+                                <li>한국농아사회정보원 회장</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="role">이사</div>
+                            <div class="name">이지용</div>
+                            <ul class="curr">
+                                <li>LG전자 책임연구원</li>
+                                <li>한국전자정보 통신산업진흥회 가전접근성 표준기술위원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="role">감사</div>
+                            <div class="name">김대성</div>
+                            <ul class="curr">
+                                <li>한국전자정보 통신산업진흥회 전문위원</li>
+                                <li>KEA 가전접근성 표준기술위원회 간사</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sec-map">
+                <div class="map-naver" id="map">
+                    네이버 지도
+                </div>
+                <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=krbwlolsjp"></script>
+                <script>
+                    // X :127.003692, Y :37.5807122
+                    var map = new naver.maps.Map('map', {
+                        center: new naver.maps.LatLng(37.5807122, 127.003692),
+                        zoom: 18
+                    });
+
+                    var marker = new naver.maps.Marker({
+                        position: new naver.maps.LatLng(37.5807122, 127.003692),
+                        map: map
+                    });
+                </script>
+                <div class="wrap">
+                    <div class="map-explain box-sd">
+                        <h3>오시는 길</h3>
+                        <ul class="map-data">
+                            <li>
+                                <p class="tit">주소</p>
+                                <p class="txt">서울 종로구 대학로8길 26</p>
+                            </li>
+                        </ul>
+                        <div class="btn-more"><a target="_blank" href="https://map.naver.com/v5/search/%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%8C%80%ED%95%99%EB%A1%9C8%EA%B8%B8%2026/address/14137987.468896475,4520362.582028674,%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%8C%80%ED%95%99%EB%A1%9C8%EA%B8%B8%2026,new?c=14137929.0920426,4520365.2474800,19,0,0,0,dh&isCorrectAnswer=true">네이버 지도에서 보기<span class="material-symbols-outlined">chevron_right</span></a></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wrap">
+                <div class="ft-menu">
+                    <ul class="ft-nav">
+                        <li><a href="/accessibilities">접근성 소개</a></li>
+                        <li><a href="/center">연구원 소개</a></li>
+                        <li><a href="/library">자료실</a></li>
+                        <li><a href="/contact">문의하기</a></li>
+                    </ul>
+                    <ul class="site-map">
+                        <li><a href="/policy.html" target="_blank">개인정보처리방침</a></li>
+                        <li><a href="#none" onclick="alert(`서비스 준비중입니다.`)">이용약관</a></li>
+                    </ul>
+                </div>
+                <address>
+                    <h2 class="ft-logo"><img src="/images/ft-logo.png" alt=""></h2>
+                    <p>
+                        (사)한국접근성평가연구원 서울 종로구 대학로8길 26, 6층 (동숭동, 예향빌딩)<br>
+                        사업자등록번호 139-82-03219 / 대표자 이성일<br>
+                        COPYRIGHT©KOREA ACCESSIBILITY RESEARCH & EVALUATION ALL RIGHTS RESERVED.
+                    </p>
+                </address>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

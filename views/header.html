@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <h1><a href="/"><img src="/images/logo.png" alt="한국접근성평가연구원"></a></h1>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="/accessibilities">접근성소개</a></li>
+                    <li><a href="/center">연구원소개</a></li>
+                    <li><a href="/library">자료실</a></li>
+                    <li><a href="/contact">문의하기</a></li>
+                </ul>
+                <div class="utilities">
+                    {% if user and user.id %}
+                        <ul class="sign">
+                            <li class="sign-in"><a href="/login">로그인</a></li>
+                            <li class="sign-up"><a href="/join">회원가입</a></li>
+                        </ul>
+                    {% else %}
+                        <ul class="sign">
+                            <li class="sign-out"><a href="/logout">로그아웃</a></li>
+                        </ul>
+                    {% endif %}
+                    <div class="toggle-viewmode" onclick="alert(`서비스 준비중입니다.`)">
+                        <button class="btn-toggle-viewmode"><span class="material-symbols-outlined symbols">bedtime</span>야간모드</button>
+                    </div>
+                </div>
+            </nav>
+            <button class="btn-nav-opn" onclick="navBtnAnim()">
+                <span></span>
+            </button>
+            <script>
+                const navBtnAnim = () => {
+                    const navBtn = document.querySelector(".btn-nav-opn");
+                    const nav = document.querySelector("nav");
+                    navBtn.classList.toggle("active");
+                    nav.classList.toggle("on")
+                }
+            </script>
+        </div>
+    </header>
+</body>
+</html>

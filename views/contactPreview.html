@@ -1,0 +1,78 @@
+{% extends 'admin.html' %}
+
+{% block contactPreview %}
+  <div class="dashboard">
+    <div class="wrap">
+      <h3>의뢰자 정보</h3>
+      <table>
+        <tr>
+          <th>의뢰자명</th>
+          <td>{{ request.clientCompany }}</td>
+          <th>담당자명</th>
+          <td>{{ request.clientName }}</td>
+          <th>전화번호</th>
+          <td>{{ request.clientPhone }}</td>
+          <th>이메일</th>
+          <td>{{ request.clientEmail }}</td>
+        </tr>
+        <tr>
+          <th>의뢰자 소재지</th>
+          <td colspan="3">{{ request.clientAddress }}</td>
+          <th>사업자등록번호</th>
+          <td colspan="3">{{ request.clientBizNumber }}</td>
+        </tr>
+      </table>
+      <h3>기기정보</h3>
+      <table>
+        <tr>
+          <th>모델명</th>
+          <td colspan="7">{{ request.clientBizNumber }}</td>
+        </tr>
+        <tr>
+          <th>기기 높이</th>
+          <td>{{ request.deviceMeasureHeight }}mm</td>
+          <th>기기 폭</th>
+          <td>{{ request.deviceMeasureWidth }}mm</td>
+          <th>기기 깊이</th>
+          <td>{{ request.deviceMeasureDepth }}mm</td>
+        </tr>
+        <tr>
+          <th>화면하단-지면</th>
+          <td>{{ request.deviceDisplayOffset }}mm</td>
+          <th>화면 폭</th>
+          <td>{{ request.deviceDisplayWidth }}mm</td>
+          <th>화면 높이</th>
+          <td>{{ request.deviceDisplayHeight }}mm</td>
+        </tr>
+        <tr>
+          <th>조작면-지면 높이</th>
+          <td>{{ request.deviceControllerHeight }}mm</td>
+          <th>화면에서 조작면 돌출 깊이</th>
+          <td>{{ request.deviceControllerOffset }}mm</td>
+          <th>물리 버튼 수</th>
+          <td>{{ request.deviceControllerCounts }}mm</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>소프트웨어 명칭</th>
+          <td>{{ request.softwareName }}mm</td>
+          <th>해상도</th>
+          <td>{{ request.softwareResolutionWidth }}*{{ softwareResolutionHeight }}</td>
+          <th>페이지수</th>
+          <td>{{ request.softwarePages }}mm</td>
+        </tr>
+        <tr>
+          <th>추가 요청사항</th>
+          <td colspan="7">{{ request.userMessage }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll(".navi li").forEach(function(list) {
+      list.classList.remove("on");
+    })
+    document.querySelector(".navi li:nth-child(3)").classList.add("on");
+  </script>
+{% endblock %}

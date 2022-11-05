@@ -1,0 +1,332 @@
+.sec-tit{
+    background-image: url(../images/page-tit-bg-m.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 240px;
+}
+
+.sec-tit .wrap{
+    height: 100%;
+}
+.sec-tit .wrap .txt-wrap{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 0 15px;
+}
+.sec-tit .wrap .txt-wrap .sub-tit{
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+.sec-tit .wrap .txt-wrap h2{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 16px;
+}
+.sec-tit .wrap .txt-wrap .desc{
+    font-size: 14px;
+    color: #fff;
+}
+
+.sec-board{
+    padding: 50px 0;
+}
+.sec-board .board-head{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+.sec-board .board-head .categories{
+    display: flex;
+}
+.sec-board .board-head .categories li.on button{
+    color: #0046d7;
+    background-color: #0046d720;
+}
+.sec-board .board-head .categories li button{
+    padding: 3px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+}
+.sec-board .board-head .search{
+    margin-top: 20px;
+}
+.sec-board .board-head .search form{
+    display: flex;
+    position: relative;
+}
+.sec-board .board-head .search form input{
+    display: block;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    padding: 3px 14px;
+    width: 100%;
+    border-radius: 50px;
+}
+.sec-board .board-head .search form button{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+}
+.sec-board .board-body{
+    border-top: 1px solid #072a60;
+    border-bottom: 1px solid #072a60;
+}
+.sec-board .board-body ol li{
+    border-bottom: 1px solid #d0d0d0;
+}
+.sec-board .board-body ol li a{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+.sec-board .board-body ol li a .date-box{
+    background-color: #eff4fe;
+    padding: 3px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 4px;
+    margin-bottom: 16px;
+}
+
+.sec-board .board-body ol li a .cate-label{
+    padding: 3px 14px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0046d7;
+    border: 1px solid #0046d7;
+}
+.sec-board .board-body ol li a .content{
+    width: 100%;
+}
+.sec-board .board-body ol li a .content .con-tit{
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 0;
+}
+.sec-board .board-body ol li a .content .con-desc{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+}
+
+.sec-board .board-foot{}
+.sec-board .board-foot .total{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+.sec-board .board-foot .total span{
+    color: #0046d7;
+}
+.sec-board .board-foot .board-pagination{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sec-board .board-foot .board-pagination .arrow{
+    width: calc((100% - 4px) / 2);
+    padding: 4px;
+    background-color: #0046d720;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0;
+}
+.sec-board .board-foot .board-pagination .arrow span{
+    font-size: 18px;
+    display: block;
+    color: #0046d7;
+    font-weight: 600;
+}
+.sec-board .board-foot .board-pagination .pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sec-board .board-foot .board-pagination .pagination li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0046d720;
+    color: #0046d7;
+}
+.sec-board .board-foot .board-pagination .pagination li.on a{
+    background-color: #0046d7;
+    color: #fff;
+}
+
+@media all and (min-width: 1130px) {
+    .sec-tit{
+        background-image: url(../images/page-tit-bg-pc.jpg);
+        height: 375px;
+    }
+
+    .sec-tit .wrap .txt-wrap{
+        top: 130px;
+        padding: 0 30px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+    }
+    .sec-tit .wrap .txt-wrap .sub-tit{
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+    }
+    .sec-tit .wrap .txt-wrap h2{
+        font-size: 32px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .sec-tit .wrap .txt-wrap .desc{
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .sec-board{
+        padding: 100px 0;
+    }
+    .sec-board .board-head{
+        padding-bottom: 30px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sec-board .board-head .categories li button{
+        font-size: 16px;
+    }
+    .sec-board .board-head .search{
+        margin-top: 0;
+    }
+    .sec-board .board-head .search form{
+        width: 300px;
+    }
+    .sec-board .board-head .search form input{
+        font-size: 16px;
+    }
+    .sec-board .board-body{
+        border-top: 2px solid #072a60;
+        border-bottom: 2px solid #072a60;
+    }
+    .sec-board .board-body ol li a{
+        padding: 30px 0;
+        flex-wrap: nowrap;
+    }
+    .sec-board .board-body ol li a .date-box{
+        background-color: #eff4fe;
+        padding: 0;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-align: center;
+        border-radius: 12px;
+        color: #0046d790;
+        margin-right: 30px;
+    }
+
+    .sec-board .board-body ol li a .date-box .year{
+        font-size: 14px;
+        display: block;
+        line-height: 1;
+    }
+    .sec-board .board-body ol li a .date-box .dot{display: none;}
+    .sec-board .board-body ol li a .date-box .date{
+        font-size: 42px;
+        display: block;
+        line-height: 1;
+    }
+    
+    .sec-board .board-body ol li a .cate-label{
+        flex-shrink: 0;
+        padding: 2px 8px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .sec-board .board-body ol li a .content{
+        width: 100%;
+    }
+    .sec-board .board-body ol li a .content .con-tit{
+        font-size: 20px;
+        padding: 0;
+        margin-bottom: 12px;
+    }
+    .sec-board .board-body ol li a .content .con-desc{
+        -webkit-line-clamp: 2;
+        font-size: 18px;
+    }
+    
+    .sec-board .board-foot{
+        position: relative;
+        margin-top: 30px;
+    }
+    .sec-board .board-foot .total{
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+    }
+    .sec-board .board-foot .board-pagination{
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .sec-board .board-foot .board-pagination .arrow{
+        font-weight: 600;
+        width: 32px;
+        height: 32px;
+        padding: 4px;
+        font-size: 0;
+        margin: 0;
+        border-radius: 50%;
+    }
+    .sec-board .board-foot .board-pagination .arrow-next{
+        order: 3;
+    }
+    .sec-board .board-foot .board-pagination .arrow span{
+        font-size: 24px;
+    }
+    .sec-board .board-foot .board-pagination .pagination{
+        width: unset;
+    }
+    .sec-board .board-foot .board-pagination .pagination li{
+        margin: 0 12px;
+    }
+    .sec-board .board-foot .board-pagination .pagination li a{
+        font-size: 16px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #0046d720;
+        color: #0046d7;
+    }
+    .sec-board .board-foot .board-pagination .pagination li.on a{
+        background-color: #0046d7;
+        color: #fff;
+    }
+}

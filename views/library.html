@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="naver-site-verification" content="48afc92b605bc20e8d91af7ced284ffe8ee01604" />
+        <meta name="description" content="한국접근성평가연구원">
+        <meta property="og:type" content="website"> 
+        <meta property="og:title" content="한국접근성평가연구원">
+        <meta property="og:description" content="한국접근성평가연구원">
+        <meta property="og:image" content="https://kcaa.re.kr/images/logo.png">
+        <meta property="og:url" content="www.kcaa.re.kr">
+        <meta
+        name="keywords"
+        content="한국접근성평가연구원, 접근성평가, 접근성, 웹접근성, web accessibility, accessibility, 키오스크접근성, 사용성, 사용성평가, 접근성연구원, 접근성 연구, 키오스크개발, 키오스크평가"
+        />
+        <title>한국접근성평가연구원</title>
+        <link rel="canonical" href="/">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="/common.css">
+        <link rel="stylesheet" href="/app.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/library.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="/js/main.js"></script>
+    </head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="wrap">
+                <h1><a href="/"><img src="/images/logo.png" alt="한국접근성평가연구원"></a></h1>
+                <nav>
+                    <ul class="navigation">
+                        <li><a href="/accessibilities">접근성소개</a></li>
+                        <li><a href="/center">연구원소개</a></li>
+                        <li class="on"><a href="/library">자료실</a></li>
+                        <li><a href="/contact">문의하기</a></li>
+                    </ul>
+                    <div class="utilities">
+                        {% if user and user.id %}
+                            <div class="sign">
+                                <div>{{'안녕하세요! ' + user.userName + '님'}}</div>
+                                <div class="sign-out"><a href="/auth/logout">로그아웃</a></div>
+                            </div>
+                        {% else %}
+                            <ul class="sign">
+                                <li class="sign-in"><a href="/login">로그인</a></li>
+                                <li class="sign-up"><a href="/join">회원가입</a></li>
+                            </ul>
+                        {% endif %}
+                        <div class="toggle-viewmode" onclick="alert(`서비스 준비중입니다.`)">
+                            <button class="btn-toggle-viewmode"><span class="material-symbols-outlined symbols">bedtime</span>야간모드</button>
+                        </div>
+                    </div>
+                </nav>
+                <button class="btn-nav-opn" onclick="navBtnAnim()">
+                    <span></span>
+                </button>
+                <script>
+                    const navBtnAnim = () => {
+                        const navBtn = document.querySelector(".btn-nav-opn");
+                        const nav = document.querySelector("nav");
+                        navBtn.classList.toggle("active");
+                        nav.classList.toggle("on")
+                    }
+                </script>
+            </div>
+        </header>
+        <div class="sec-tit">
+            <div class="wrap">
+                <div class="txt-wrap">
+                    <p class="sub-tit">LIBRARY</p>
+                    <h2>자료실</h2>
+                    <div class="desc">
+                        KCAAR의 새로운 소식과 접근성에 관련한 더 자세한 이야기를 살펴보세요.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <section class="sec-board">
+                <div class="wrap">
+                    <div class="board-head">
+                        <ul class="categories">
+                            <li class="on"><button>전체</button></li>
+                            <li><button>공시</button></li>
+                            <li><button>공지사항</button></li>
+                            <li><button>참고자료</button></li>
+                        </ul>
+                        <div class="search">
+                            <form action="" onsubmit="alert(`검색기능 준비중입니다.`)">
+                                <input type="text" placeholder="검색어를 입력하세요">
+                                <button class="material-symbols-outlined">  
+                                    search
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="board-body">
+                        <ol>
+                            {% for list in libraries%}
+                            <li>
+                                <a href="/library/{{list.id}}">
+                                    <div class="date-box">
+                                        <span class="year">{{ list.createdAt.split("-")[0] + "." + list.createdAt.split("-")[1] }}</span><span class="dot">.</span><span class="date">{{ list.createdAt.split("-")[2] }}</span>
+                                    </div>
+                                    {% if list.category === "disclosure" %}
+                                    <div class="cate-label">공시</div>
+                                    {% elif list.category === "notice" %}
+                                    <div class="cate-label">공지사항</div>
+                                    {% elif list.category === "refs" %}
+                                    <div class="cate-label">참고자료</div>
+                                    {% endif %}
+                                    <div class="content">
+                                        <div class="con-tit">{{ list.title }}</div>
+                                        <div class="con-desc">
+                                            {{ list.content }}
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+                    <div class="board-foot">
+                        <div class="total">
+                            총 <span>23</span>건
+                        </div>
+                        <div class="board-pagination">
+                            <div class="arrow arrow-prev"><span class="material-symbols-outlined">arrow_back</span>이전페이지</div>
+                            <div class="arrow arrow-next">다음페이지<span class="material-symbols-outlined">arrow_forward</span></div>
+                            <ul class="pagination">
+                                <li class="on"><a href="#none">1</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wrap">
+                <div class="ft-menu">
+                    <ul class="ft-nav">
+                        <li><a href="/accessibilities">접근성 소개</a></li>
+                        <li><a href="/center">연구원 소개</a></li>
+                        <li><a href="/library">자료실</a></li>
+                        <li><a href="/contact">문의하기</a></li>
+                    </ul>
+                    <ul class="site-map">
+                        <li><a href="/policy.html" target="_blank">개인정보처리방침</a></li>
+                        <li><a href="#none" onclick="alert(`서비스 준비중입니다.`)">이용약관</a></li>
+                    </ul>
+                </div>
+                <address>
+                    <h2 class="ft-logo"><img src="/images/ft-logo.png" alt=""></h2>
+                    <p>
+                        (사)한국접근성평가연구원 서울 종로구 대학로8길 26, 6층 (동숭동, 예향빌딩)<br>
+                        사업자등록번호 139-82-03219 / 대표자 이성일<br>
+                        COPYRIGHT©KOREA ACCESSIBILITY RESEARCH & EVALUATION ALL RIGHTS RESERVED.
+                    </p>
+                </address>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

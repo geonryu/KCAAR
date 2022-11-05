@@ -1,0 +1,180 @@
+.sec-sign form{
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.sec-sign form h3{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #072a60;
+}
+.sec-sign form > div{
+    margin-bottom: 15px;
+}
+.sec-sign form > div:last-child{
+    margin-bottom: 0;
+}
+.sec-sign form > div label{
+    color: #0046d7;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+.sec-sign form > div input{
+    padding: 0 15px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+}
+.sec-sign form .input-phone .phone-numbers{
+    display: flex;
+    align-items: center;
+}
+/* .sec-sign form .input-phone .phone-numbers input:nth-of-type(1){max-width: 80px; text-align: center;}
+.sec-sign form .input-phone .phone-numbers input:nth-of-type(2){max-width: 100px; text-align: center;}
+.sec-sign form .input-phone .phone-numbers input:nth-of-type(3){max-width: 100px; text-align: center;}
+.sec-sign form .input-phone .phone-numbers span{
+    margin: 0 4px;
+} */
+.sec-sign form .btn-sign-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: #072a60;
+    color: #ffffff;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.sec-sign form .policies{
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #d4d4d4;
+}
+
+.sec-sign form .policies li{
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-sign form .policies li:last-child{
+    margin-bottom: 0;
+}
+
+.sec-sign form .policies li input{
+    overflow: hidden;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    background: transparent;
+    visibility: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+.sec-sign form .policies li input:checked+label::after{
+    border-color: #0046d7;
+}
+.sec-sign form .policies li label{
+    cursor: pointer;
+}
+.sec-sign form .policies li label::after{
+    display: block;
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    content: '';
+    top: 3px;
+    left: 7px;
+    width: 5px;
+    height: 10px;
+    box-sizing: content-box;
+}
+.sec-sign form .policies li span{
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+}
+
+@media all and (min-width: 1130px) {
+    .sec-sign form{
+        padding: 80px 0;
+    }
+    
+    .sec-sign form h3{
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .sec-sign form > div{
+        margin-bottom: 30px;
+    }
+    .sec-sign form > div label{
+        margin-left: 12px;
+    }
+    .sec-sign form > div input{
+        padding: 0 15px;
+        height: 60px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+    /* .sec-sign form .input-phone .phone-numbers input:nth-of-type(1){max-width: 80px; text-align: center;}
+    .sec-sign form .input-phone .phone-numbers input:nth-of-type(2){max-width: 100px; text-align: center;}
+    .sec-sign form .input-phone .phone-numbers input:nth-of-type(3){max-width: 100px; text-align: center;}
+    .sec-sign form .input-phone .phone-numbers span{
+        margin: 0 4px;
+    } */
+    .sec-sign form .btn-sign-up{
+        height: 60px;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 16px;
+        margin-top: 30px;
+    }
+    
+    .sec-sign form .policies{
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+    
+    .sec-sign form .policies li{
+        margin-bottom: 16px;
+        font-size: 18px;
+        padding-left: 28px;
+    }
+    
+    .sec-sign form .policies li input{
+        top: 3px;
+        left: 3px;
+    }
+    .sec-sign form .policies li label::after{
+        top: 4px;
+        left: 6px;
+        width: 6px;
+        height: 12px;
+        border-width: 0 2px 2px 0;
+    }
+}

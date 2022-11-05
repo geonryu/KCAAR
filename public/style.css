@@ -1,0 +1,381 @@
+@media all and (min-width: 1130px) {
+    #wrapper{
+    }
+    
+    .wrap{
+        padding: 0 30px;
+        max-width: 1340px;
+        margin: 0 auto;
+    }
+    
+    header{
+        height: 112px;
+        border-top: 10px solid #072a60;
+        border-bottom: 2px solid #f0f0f0;
+    }
+    
+    header .wrap h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header .wrap h1 img{
+        display: block;
+        width: 250px;
+        height: auto;
+    }
+    
+    header .wrap nav{
+        position: unset;
+        width: unset;
+        height: unset;
+        background-color: unset;
+        top: unset;
+        left: unset;
+        padding: unset;
+        border-top: unset;
+        transition: unset;
+    }
+    header .wrap nav.on{
+        left: 0;
+    }
+    
+    header .wrap nav .navigation{
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    header .wrap nav .navigation li{
+        border-bottom: unset;
+        font-size: 20px;
+        margin: 0 25px;
+        display: flex;
+        align-items: center;
+    }
+    header .wrap nav .navigation li.on::before{
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 8px;
+        background-color: #072a60;
+    }
+    header .wrap nav .navigation li a{
+        padding: unset;
+    }
+    header .wrap nav .utilities{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        position: unset;
+        top: unset;
+        left: unset;
+        height: unset;
+    }
+    header .wrap nav .utilities .sign{
+        font-size: 16px;
+        display: flex;
+    }
+    header .wrap nav .utilities .sign li{
+        border-radius: 0;
+        background-color: unset;
+        color: #072a60;
+        margin-right: 15px;
+        font-weight: 600;
+    }
+    header .wrap nav .utilities .sign .sign-up{
+        display: block;
+    }
+    header .wrap nav .utilities .sign li a{
+        padding: 0;
+        display: block;
+    }
+    header .wrap nav .utilities .toggle-viewmode{
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+    header .wrap nav .utilities .toggle-viewmode .btn-toggle-viewmode{
+        border: 2px solid #072a60;
+        background-color: unset;
+        color: #072a60;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+    header .wrap nav .utilities .toggle-viewmode .btn-toggle-viewmode span{
+        font-size: 14px;
+    }
+    
+    header .wrap .btn-nav-opn{
+        display: none;
+    }
+
+    main{
+        position: relative;
+    }
+    
+    main .box-sd{
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+    }
+    
+    .sec-bn{
+        padding: 40px 30px;
+        max-width: 1340px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .sec-bn h2{
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+    
+    .sec-bn .slider{
+        margin: 0 auto;
+        overflow: unset;
+    }
+    .sec-bn .slider .swiper-wrapper{}
+    .sec-bn .slider .swiper-wrapper .item{
+        height: 480px;
+        border-radius: 20px;
+    }
+    .sec-bn .slider .swiper-wrapper .item a{
+        padding: 0 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sec-bn .slider .swiper-wrapper .item a .slide-txt{
+        height: unset;
+        justify-content: center;
+        height: 100%;
+        width: 55%;
+    }
+    .sec-bn .slider .swiper-wrapper .item a .slide-txt .slide-tag{
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    .sec-bn .slider .swiper-wrapper .item a .slide-txt .slide-tit{
+        margin-bottom: 20px;
+        font-size: 32px;
+        margin-top: 0;
+    }
+    .sec-bn .slider .swiper-wrapper .item a .slide-txt .slide-desc{
+        font-size: 20px;
+    }
+    .sec-bn .slider .swiper-wrapper .item a .slide-img{
+        position: unset;
+        width: 30%;
+        top: unset;
+        transform: unset;
+        left: unset;
+        display: flex;
+        align-items: center;
+    }
+
+    .sec-bn .btn-slider-nav-prev{
+        height: 480px;
+        width: 100px;
+        position: absolute;
+        left: 0;
+        bottom: 40px;
+        z-index: 999999;
+        cursor: pointer;
+    }
+    .sec-bn .btn-slider-nav-prev::before{
+        content: '';
+        display: block;
+        width: 70px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url(../images/slider-nav-grad-prv.png);
+        background-size: 100% 100%;
+        background-position: left center;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+    .sec-bn .btn-slider-nav-prev:hover::before{opacity: 1;}
+    .sec-bn .btn-slider-nav-prev:active::before{opacity: 0;}
+    .sec-bn .btn-slider-nav-next{
+        height: 480px;
+        width: 100px;
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        z-index: 999999;
+        cursor: pointer;
+    }
+    .sec-bn .btn-slider-nav-next::before{
+        content: '';
+        display: block;
+        width: 70px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../images/slider-nav-grad-nxt.png);
+        background-size: 100% 100%;
+        background-position: right center;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+    .sec-bn .btn-slider-nav-next:hover::before{opacity: 1;}
+    .sec-bn .btn-slider-nav-next:active::before{opacity: 0;}
+    .sec-bn > div > button{
+        width: 30px;
+        height: 30px;
+        background-color: #072a60;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 600;
+    }
+    .sec-bn > div:hover > button{
+        background-color: #b2c6f2;
+        color: #072a60;
+    }
+    .sec-bn > div:active > button{
+        background-color: #072a60;
+        color: #fff;
+    }
+    .sec-bn button.arrow-prev{
+        left: 0;
+        transform: translate(50%, -50%);
+    }
+    .sec-bn button.arrow-next{
+        right: 0;
+        transform: translate(-50%, -50%);
+    }
+    
+    .sec-intro{
+        padding: 40px 0;
+    }
+    .sec-intro .wrap{}
+    .sec-intro .wrap h3{
+        margin-bottom: 30px;
+        font-size: 32px;
+        text-align: center;
+    }
+    .sec-intro .wrap .content{
+        border-radius: 20px;
+    }
+    .sec-intro .wrap .content a{
+        padding: 40px 0 20px;
+    }
+    .sec-intro .wrap .content .tit{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .sec-intro .wrap .content .btn-more{
+        padding: 3px 14px;
+        margin: 12px 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #072a60;
+        display: inline-block;
+        border-radius: 50px;
+    }
+    .sec-intro .wrap .content .pic{margin-top: auto;}
+    
+    .sec-more{
+        padding: 50px 0 100px;
+    }
+    .sec-more .wrap{}
+    .sec-more .wrap h3{
+        margin-bottom: 30px;
+        font-size: 32px;
+        text-align: center;
+    }
+    .sec-more .wrap .content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sec-more .wrap .content .box{
+        border-radius: 20px;
+        margin-bottom: 0;
+        width: 100%;
+        margin-right: 40px;
+    }
+    .sec-more .wrap .content .box:last-child{
+        margin-right: 0;
+    }
+    .sec-more .wrap .content .box a{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        padding: 30px;
+        height: 100%;
+    }
+    .sec-more .wrap .content .box a .ico{
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .sec-more .wrap .content .box a .txt{
+        font-size: 24px;        
+    }
+    .sec-more .wrap .content .box a .icon-more{
+        margin-left: auto;
+        color: #072a60;
+    }
+    .sec-more .wrap .content .box a .icon-more span{
+        font-size: 42px;
+    }
+    
+    footer{
+        padding: 50px 0;
+    }
+    footer .wrap{
+        padding-top: 0;
+    }
+    footer .wrap .ft-menu .ft-nav{
+        font-size: 18px;
+        padding-top: 0;
+        display: flex;
+    }
+    footer .wrap .ft-menu .ft-nav li{
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+    footer .wrap .ft-menu .site-map{
+        padding-top: 0;
+        font-size: 18px;
+        display: flex;
+    }
+    footer .wrap .ft-menu .site-map li{
+        margin-bottom: 0;
+        margin-left: 30px;
+    }
+    footer .wrap address{
+        display: flex;
+        border-top: 2px solid #b2c6f2;
+        padding-top: 30px;
+        margin-top: 30px;
+    }
+    footer .wrap address h2{
+        height: unset;
+        position: unset;
+        transform: translateX(0);
+        margin-right: 30px;
+    }
+    footer .wrap address h2 img{
+        height: unset;
+        width: 280px;
+    }
+    footer .wrap address p{
+        font-size: 16px;
+        margin-top: 0;
+        text-align: left;
+    }
+    
+}

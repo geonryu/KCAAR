@@ -1,0 +1,37 @@
+{% extends 'admin.html' %}
+
+{% block content %}
+  
+  <div class="dashboard">
+    <div class="wrap">
+      <table class="members">
+        <tr>
+          <th>ID(email)</th>
+          <th>이름</th>
+          <th>연락처</th>
+          <th>가입일</th>
+          <th>회원구분</th>
+        </tr>
+        {% for member in members%}
+          <tr>
+            <td>{{member.email}}</td>
+            <td>{{member.userName}}</td>
+            <td>{{member.phone}}</td>
+            <td>{{member.createdAt}}</td>
+            {% if member.memberType === "super" %}
+              <td class="manager">관리자</td>
+              {% else %}
+              <td>일반회원</td>
+            {% endif %}
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll(".navi li").forEach(function(list) {
+      list.classList.remove("on");
+    })
+    document.querySelector(".navi li:nth-child(1)").classList.add("on");
+  </script>
+{% endblock %}

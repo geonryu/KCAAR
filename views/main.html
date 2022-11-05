@@ -1,0 +1,156 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<main>
+    <section class="sec-bn">
+        <h2>
+            세상을 연결하는 작은 변화<br>
+            한국접근성평가연구원이 만들어갑니다.
+        </h2>
+        <div class="swiper slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide item box-sd">
+                    <a href="/databoard">
+                        <div class="slide-txt">
+                            <div class="slide-tag">공지사항</div>
+                            <div class="slide-tit">우선구매대상 지능정보제품 검증 및 시험기관 지정 등에 관한 지침</div>
+                            <!-- <div class="slide-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna </div> -->
+                        </div>
+                        <div class="slide-img">
+                            <img src="/images/bn-illust-1.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="btn-slider-nav-prev">
+            <button class="arrow-prev"><span class="material-symbols-outlined">navigate_before</span></button>
+        </div>
+        <div class="btn-slider-nav-next">
+            <button class="arrow-next"><span class="material-symbols-outlined">navigate_next</span></button>
+        </div>
+        <script>
+            const mainBn = new Swiper(".sec-bn .slider", {
+                slidesPerView : 1,
+                centeredSlides: true,
+                spaceBetween: 40,
+                loop: true,
+                navigation: {
+                    nextEl: ".btn-slider-nav-next",
+                    prevEl: ".btn-slider-nav-prev",
+                },
+            })
+        </script>
+    </section>
+    <section class="sec-intro">
+        <div class="wrap">
+            <h3>
+                당신이 모르는 접근성에 대한<br>
+                모든 이야기
+            </h3>
+            <div class="content box-sd">
+                <a href="/accessibilities.html">
+                    <div class="tit">
+                        SW개발자도 사용자도 모두가 알았으면 하는<br>
+                        접근성에 대한 모든 이야기들을 모아보았습니다.
+                    </div>
+                    <div class="btn-more">더 알아보기</div>
+                    <div class="pic">
+                        <img src="/images/sec-intro-illust.png" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="sec-more">
+        <div class="wrap">
+            <h3>
+                더 많은 자료를 살펴보세요
+            </h3>
+            <div class="content">
+                <div class="box box-sd">
+                    <a href="/library.html">
+                        <div class="ico">
+                            <img src="/images/sec-more-ico-1.png" alt="">
+                        </div>
+                        <div class="txt">
+                            정보화 기본법<br>
+                            자료실 바로가기
+                        </div>
+                        <div class="icon-more">
+                            <span class="material-symbols-outlined">arrow_circle_right</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="box box-sd">
+                    <a href="/accessibilities.html">
+                        <div class="ico">
+                            <img src="/images/sec-more-ico-2.png" alt="">
+                        </div>
+                        <div class="txt">
+                            접근성 소개와 표준
+                        </div>
+                        <div class="icon-more">
+                            <span class="material-symbols-outlined">arrow_circle_right</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="box box-sd">
+                    <a href="/accessibilities.html">
+                        <div class="ico">
+                            <img src="/images/sec-more-ico-3.png" alt="">
+                        </div>
+                        <div class="txt">
+                            시험 평가 가이드라인<br>
+                            자세히 알아보기
+                        </div>
+                        <div class="icon-more">
+                            <span class="material-symbols-outlined">arrow_circle_right</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block script %}
+  <script>
+    // if (document.getElementById('img')) {
+    //   document.getElementById('img').addEventListener('change', function(e) {
+    //     const formData = new FormData();
+    //     console.log(this, this.files);
+    //     formData.append('img', this.files[0]);
+    //     axios.post('/post/img', formData)
+    //       .then((res) => {
+    //         document.getElementById('img-url').value = res.data.url;
+    //         document.getElementById('img-preview').src = res.data.url;
+    //         document.getElementById('img-preview').style.display = 'inline';
+    //       })
+    //       .catch((err) => {
+    //         console.error(err);
+    //       });
+    //   });
+    // }
+    // document.querySelectorAll('.twit-follow').forEach(function(tag) {
+    //   tag.addEventListener('click', function() {
+    //     const myId = document.querySelector('#my-id');
+    //     if (myId) {
+    //       const userId = tag.parentNode.querySelector('.twit-user-id').value;
+    //       if (userId !== myId.value) {
+    //         if (confirm('팔로잉하시겠습니까?')) {
+    //           axios.post(`/user/${userId}/follow`)
+    //             .then(() => {
+    //               location.reload();
+    //             })
+    //             .catch((err) => {
+    //               console.error(err);
+    //             });
+    //         }
+    //       }
+    //     }
+    //   });
+    // });
+  </script>
+{% endblock %}

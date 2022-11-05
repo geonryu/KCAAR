@@ -1,0 +1,52 @@
+{% extends 'admin.html' %}
+
+{% block content %}
+  <div class="dashboard">
+    <div class="wrap">
+      <div class="write">
+        <style>.btn-write{padding: 4px 12px; background-color: #0046d7; color: #fff; font-size: 13px; border-radius: 5px; margin-bottom: 12px;}</style>
+      </div>
+      <style>
+        h3{margin: 0 0 15px 0;}
+        form{display: block; width: 100%; padding-bottom: 60px;}
+        input,select,option,textarea{display: block;}
+        input,select,textarea{margin-bottom: 15px;}
+        input{padding: 4px 12px; box-sizing: border-box; width: 100%;}
+        textarea{width: 100%;}
+        label{font-size: 14px; font-weight: 600; color: #0046d7; border-top: 1px solid #ccc; display: block; padding: 12px 0 4px;}
+      </style>
+      <form id="postForm" action="/post/upload" method="post" enctype="multipart/form-data">
+        <h3>반드시 모든 필드를 채워주세요!</h3>
+
+        <label for="category">카테고리</label>
+        <select name="category" id="category">
+          <option value="disclosure">공시</option>
+          <option value="notice">공지사항</option>
+          <option value="refs">참고자료</option>
+        </select>
+
+        <label for="postTitle">제목</label>
+        <input name="title" type="text" id="postTitle" placeholder="140자 이내 기입" required>
+
+        <label for="content">본문작성</label>
+        <textarea name="content" id="content" cols="30" rows="20" style="resize: none;" placeholder="400자 이내 작성" required></textarea>
+
+        <label for="attach1">본문 출력 대표이미지 (5MB 이하)</label>
+        <input name="attach1" type="file" id="attach1" accept="image/*">
+        <label for="attach2">첨부파일 1 (5MB 이하)</label>
+        <input name="attach2" type="file" id="attach2">
+        <label for="attach3">첨부파일 2 (5MB 이하)</label>
+        <input name="attach3" type="file" id="attach3">
+
+        <button class="btn-cancel" type=“button”>취소</button>
+        <button class="btn-confirm" type="submit">업로드</button>
+      </form>
+    </div>
+  </div>
+  <script>
+      document.querySelectorAll(".navi li").forEach(function(list) {
+        list.classList.remove("on");
+      })
+      document.querySelector(".navi li:nth-child(2)").classList.add("on");
+  </script>
+{% endblock %}

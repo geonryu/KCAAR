@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="naver-site-verification" content="48afc92b605bc20e8d91af7ced284ffe8ee01604" />
+        <meta name="description" content="한국접근성평가연구원">
+        <meta property="og:type" content="website"> 
+        <meta property="og:title" content="한국접근성평가연구원">
+        <meta property="og:description" content="한국접근성평가연구원">
+        <meta property="og:image" content="https://kcaa.re.kr/images/logo.png">
+        <meta property="og:url" content="www.kcaa.re.kr">
+        <meta
+        name="keywords"
+        content="한국접근성평가연구원, 접근성평가, 접근성, 웹접근성, web accessibility, accessibility, 키오스크접근성, 사용성, 사용성평가, 접근성연구원, 접근성 연구, 키오스크개발, 키오스크평가"
+        />
+        <title>한국접근성평가연구원</title>
+        <link rel="canonical" href="/">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="/common.css">
+        <link rel="stylesheet" href="/app.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/accessibilities.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="./js/main.js"></script>
+    </head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="wrap">
+                <h1><a href="/"><img src="/images/logo.png" alt="한국접근성평가연구원"></a></h1>
+                <nav>
+                    <ul class="navigation">
+                        <li class="on"a><a href="/accessibilities">접근성소개</a></li>
+                        <li><a href="/center">연구원소개</a></li>
+                        <li><a href="/library">자료실</a></li>
+                        <li><a href="/contact">문의하기</a></li>
+                    </ul>
+                    <div class="utilities">
+                        {% if user and user.id %}
+                            <div class="sign">
+                                <div>{{'안녕하세요! ' + user.userName + '님'}}</div>
+                                <div class="sign-out"><a href="/auth/logout">로그아웃</a></div>
+                            </div>
+                        {% else %}
+                            <ul class="sign">
+                                <li class="sign-in"><a href="/login">로그인</a></li>
+                                <li class="sign-up"><a href="/join">회원가입</a></li>
+                            </ul>
+                        {% endif %}
+                        <div class="toggle-viewmode" onclick="alert(`서비스 준비중입니다.`)">
+                            <button class="btn-toggle-viewmode"><span class="material-symbols-outlined symbols">bedtime</span>야간모드</button>
+                        </div>
+                    </div>
+                </nav>
+                <button class="btn-nav-opn" onclick="navBtnAnim()">
+                    <span></span>
+                </button>
+                <script>
+                    const navBtnAnim = () => {
+                        const navBtn = document.querySelector(".btn-nav-opn");
+                        const nav = document.querySelector("nav");
+                        navBtn.classList.toggle("active");
+                        nav.classList.toggle("on")
+                    }
+                </script>
+            </div>
+        </header>
+        <div class="sec-tit">
+            <div class="wrap">
+                <div class="txt-wrap">
+                    <p class="sub-tit">ABOUT ACCESSIBILITY</p>
+                    <h2>접근성소개</h2>
+                    <div class="desc">
+                        모든 사용자가 편리함을 누릴 수 있는 접근성<br>
+                        누구나 쉽게 이해할 수 있도록 KCAAR가 알려드립니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <section class="sec-access-intro">
+                <div class="wrap">
+                    <h3>접근성이란 무엇인가요?</h3>
+                    <div class="content">
+                        <div class="pic">
+                            <img src="/images/access-intro.png" alt="">
+                        </div>
+                        <div class="desc">
+                            접근성이란,  산업 디자인, 사용자 인터페이스 디자인, 건축, 시스템 공학, 인간공학 분야에서 사용자의 신체적 특성이나, 지역, 나이, 지식 수준, 기술, 체험, 장애유무와 같은 제한 사항을 고려하여 가능한 많은 사용자가 불편 없이 이용할 수 있도록 제품이나 서비스를 만들어 제공하는 것을 말합니다.<br><br>
+                            대표적으론 웹 접근성(Web Accessibility)이 있으며, 웹 접근성이란 장애인, 고령자 등이 웹 사이트에서 제공하는 정보에 대해 비장애인과 동등하게 접근하고 이해할 수 있도록 보장하는 것을 말합니다.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sec-access-consider">
+                <div class="wrap">
+                    <h3>접근성 보장을 위해 무엇을 고려해야 하나요?</h3>
+                    <div class="content">
+                        <div class="item">
+                            <h4>
+                                <span class="num">01</span>
+                                <div class="tit">
+                                    <span class="tit-en">Perceivable</span>
+                                    <span class="tit-ko">인식의 용이성</span>
+                                </div>
+                            </h4>
+                            <div class="explain">
+                                모든 콘텐츠는 사용자가 인식할 수 있어야 합니다.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h4>
+                                <span class="num">02</span>
+                                <div class="tit">
+                                    <span class="tit-en">Operable</span>
+                                    <span class="tit-ko">운용의 용이성</span>
+                                </div>
+                            </h4>
+                            <div class="explain">
+                                사용자 인터페이스 구성요소는 조작 가능하고 내비게이션 할 수 있어야 합니다.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h4>
+                                <span class="num">03</span>
+                                <div class="tit">
+                                    <span class="tit-en">Understandable</span>
+                                    <span class="tit-ko">이해의 용이성</span>
+                                </div>
+                            </h4>
+                            <div class="explain">
+                                콘텐츠는 누구나 이해할 수 있어야 합니다.
+                            </div>
+                        </div>
+                        <div class="item"> 
+                            <h4>
+                                <span class="num">04</span>
+                                <div class="tit">
+                                    <span class="tit-en">Robust</span>
+                                    <span class="tit-ko">견고성</span>
+                                </div>
+                            </h4>
+                            <div class="explain">
+                                콘텐츠는 미래의 기술로도 접근할 수 있도록 견고하게 만들어야 합니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sec-basic-law">
+                <div class="wrap">
+                    <h3>KCAAR가 알려주는 『 지능정보화기본법』</h3>
+                    <div class="content">
+                        <div class="row row1">
+                            <div class="pic"><img src="/images/basic-law1.png" alt=""></div>
+                            <div class="desc">
+                                <div class="tit">
+                                    국가기관ㆍ지방자치단체 및 공공기관
+                                </div>
+                                <div class="txt">
+                                    국가기관등에서는 정보통신망을 이용한 정보와 서비스를 제공할 때, 장애인과 고령자가 웹사이트나 이동통신단말장치가의 응용 소프트웨어와 같은 유ㆍ무선 정보통신을 쉽게 이용할 수 있도록 접근성을 보장하여야 합니다.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row2">
+                            <div class="pic"><img src="/images/basic-law2.png" alt=""></div>
+                            <div class="desc">
+                                <div class="tit">
+                                    제품 및 서비스의 제작자 또는 제공자
+                                </div>
+                                <div class="txt">
+                                    지능정보서비스 제공자는 해당 서비스를 제공할 시, 장애인과 고령자 등의 접근과 이용의 편익을 증진하기 위한 노력을 하여야 합니다.<br>
+                                    또한 정보통신 또는 지능정보 기술 관련 제조업자 역시 관련 기기와 소프트웨어를 설계, 제작, 가공할 때 접근성을 고려하여야 하며 별도의 보조기구와도 호환될 수 있게 노력하여야 합니다.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row3">
+                            <div class="pic"><img src="/images/basic-law3.png" alt=""></div>
+                            <div class="desc">
+                                <div class="tit">정보통신접근성의 품질인증 방법</div>
+                                <div class="txt">
+                                    정보통신 접근성의 품질인증은 본 시행령 제47조제2항에 따라 지정된 인증기관을 통해서만 가능합니다. 인증평가를 받게 되면 정보통신접근성 품질인증을 받은 사실을 홍보할 수 있게 됩니다.
+                                    부정한 방법으로 정보통신접근성 품질 인증을 받거나, 제5항에 따른 정보통신접근성 품질인증 기준을 지키지 않은 경우는 인증이 취소되게 됩니다. 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link-law">
+                        <a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%A7%80%EB%8A%A5%EC%A0%95%EB%B3%B4%ED%99%94%EA%B8%B0%EB%B3%B8%EB%B2%95/(20220721,18298,20210720)/%EC%A0%9C46%EC%A1%B0">
+                            『 지능정보화기본법』 전문보기
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="sec-access-more">
+                <div class="wrap">
+                    <div class="tit-box">
+                        <h3>접근성에 관한<br>더 많은 이야기</h3>
+                    </div>
+                    <div class="content slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="box swiper-slide">
+                                <a href="http://www.kwacc.or.kr/WAI/wcag21/">
+                                    <h4>KWCAG</h4>
+                                    <div class="desc">WCAG(Web Content Accessibility Guidelines) 2.1은 웹 콘텐츠를 보다 더 접근 가능하게 만들기 위한 광범위한 권장표준을 포함하고 있는 지침입니다.</div>
+                                    <div class="btn-link"><span class="material-symbols-outlined">arrow_right_alt</span></div>
+                                </a>
+                            </div>
+                            <div class="box swiper-slide">
+                                <a href="https://accessibility.naver.com/">
+                                    <h4>네이버 접근성</h4>
+                                    <div class="desc">네이버에서 제공하는 웹 접근성에 관한 상세한 가이드를 확인할 수 있습니다.</div>
+                                    <div class="btn-link"><span class="material-symbols-outlined">arrow_right_alt</span></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <script>
+                    const accessMore = new Swiper(".sec-access-more .swiper", {
+                        slidesPerView: "auto",
+                        spaceBetween: 15,
+                        loop : true,
+                        scrollbar: {
+                            el: ".swiper-scrollbar"
+                        },
+                        breakpoints: {
+                            1130: {
+                                slidesPerView: 3,
+                                spaceBetween: "4.21%"
+                            }
+                        },
+                    })
+                </script>
+            </section>
+        </main>
+        <footer>
+            <div class="wrap">
+                <div class="ft-menu">
+                    <ul class="ft-nav">
+                        <li><a href="/accessibilities">접근성 소개</a></li>
+                        <li><a href="/center">연구원 소개</a></li>
+                        <li><a href="/library">자료실</a></li>
+                        <li><a href="/contact">문의하기</a></li>
+                    </ul>
+                    <ul class="site-map">
+                        <li><a href="/policy.html" target="_blank">개인정보처리방침</a></li>
+                        <li><a href="#none" onclick="alert(`서비스 준비중입니다.`)">이용약관</a></li>
+                    </ul>
+                </div>
+                <address>
+                    <h2 class="ft-logo"><img src="/images/ft-logo.png" alt=""></h2>
+                    <p>
+                        (사)한국접근성평가연구원 서울 종로구 대학로8길 26, 6층 (동숭동, 예향빌딩)<br>
+                        사업자등록번호 139-82-03219 / 대표자 이성일<br>
+                        COPYRIGHT©KOREA ACCESSIBILITY RESEARCH & EVALUATION ALL RIGHTS RESERVED.
+                    </p>
+                </address>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

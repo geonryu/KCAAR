@@ -1,0 +1,209 @@
+.sec-tit {
+  background-image: url(../images/page-tit-bg-m.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 240px;
+}
+.sec-tit .wrap .txt-wrap{
+  position: absolute;
+  top: 70px;
+  left: 0;
+  padding: 0 15px;
+}
+.sec-tit .wrap .txt-wrap .sub-tit{
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+.sec-tit .wrap .txt-wrap h2{
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.sec-tit .wrap .txt-wrap .desc{
+  font-size: 14px;
+  color: #fff;
+}
+
+main{}
+main .sec-contact{
+  padding: 50px 0 50px;
+}
+main .sec-contact .wrap{
+  padding: 0 15px;
+  position: relative;
+}
+
+main .sec-contact .wrap h3{
+  color: #072a60;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .sec-contact .wrap h4{}
+main .sec-contact .wrap h5{
+  font-size: 16px;
+}
+main .sec-contact .wrap h6, main .sec-contact .wrap label{
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  color: #0046d7;
+}
+
+main .sec-contact form{}
+main .sec-contact form > div{
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
+}
+main .sec-contact form > div:last-child{border-bottom: 0; padding-bottom;: 0}
+main .sec-contact form input, main .sec-contact form textarea{
+  border: 1px solid #ccc;
+  appearance: none;
+  border-radius: 4px;
+  resize: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input,button{height: 40px;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+/* Firefox */
+input[type=number] {-moz-appearance: textfield;}
+input::placeholder{font-size: 12px;}
+textarea::placeholder{font-size: 12px;}
+
+main .sec-contact form .client-info{
+  border-top: 1px solid #ccc;
+}
+main .sec-contact form .client-info .form-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .sec-contact form .client-info .form-content .client-bizname{
+  width: calc(50% - 7.5px);
+}
+main .sec-contact form .client-info .form-content .client-biznum{
+  width: calc(50% - 7.5px);
+}
+main .sec-contact form .client-info .form-content div{
+  width: 100%;
+  margin-bottom: 15px;
+}
+main .sec-contact form .client-info .form-content div:last-child{
+  margin-bottom: 0;
+}
+main .sec-contact form .client-info .form-content div input{
+  width: 100%;
+}
+main .sec-contact form .device-info{}
+main .sec-contact form .device-info .form-content{}
+main .sec-contact form .device-info .form-content .unit{}
+main .sec-contact form .device-info .form-content .operator{
+  margin: 0 10px;
+}
+main .sec-contact form .device-info .form-content .device-name{
+  margin-bottom: 15px;
+}
+main .sec-contact form .device-info .form-content .device-name input{
+  width: 100%;
+}
+main .sec-contact form .device-info .form-content .device-hardware{
+  font-size: 12px;
+}
+main .sec-contact form .device-info .form-content .device-hardware .device-measure{
+  margin-bottom: 15px;
+}
+main .sec-contact form .device-info .form-content .device-hardware .device-measure .flex-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+main .sec-contact form .device-info .form-content .device-hardware .device-measure .flex-container input{
+  font-size: 14px; 
+  max-width: 150px;
+  width: 100%;
+}
+main .sec-contact form .device-info .form-content .device-hardware .device-measure3 .flex-container > input{
+  max-width: 300px;
+}
+
+main .sec-contact form .device-info .form-content .device-software{
+  font-size: 12px;
+}
+main .sec-contact form .device-info .form-content .device-software input{
+  width: 100%;
+}
+main .sec-contact form .device-info .form-content .device-software .software-name{
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+main .sec-contact form .device-info .form-content .device-software .software-resolution{
+  font-size: 14px
+}
+main .sec-contact form .device-info .form-content .device-software .software-resolution .flex-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+main .sec-contact form .device-info .form-content .device-software .software-resolution .flex-container input{
+  max-width: 300px;
+}
+main .sec-contact form .device-info .form-content .device-software .software-page-count{
+  font-size: 14px
+}
+main .sec-contact form .device-info .form-content .device-software .software-page-count input{
+  max-width: 150px;
+}
+main .sec-contact form .message{}
+main .sec-contact form .message textarea{
+  width: 100%;
+}
+main .sec-contact form .btns{
+  display: flex;
+  justify-content: center;
+}
+main .sec-contact form .btns button.cancel{
+  width: 100%;
+  max-width: 200px;
+  margin-right: 15px;
+  background-color: #eff4fe;
+  color: #072a60;
+  border-radius: 8px;
+}
+main .sec-contact .wrap form .btns button.submit{
+  width: 100%;
+  max-width: 200px;
+  background-color: #0046d7;
+  color: #fff;
+  border-radius: 8px;
+}
+
+@media all and (min-width: 1130px) {
+  .sec-tit{
+    background-image: url(../images/page-tit-bg-pc.jpg);
+    height: 375px;
+  }
+
+  .sec-tit .wrap .txt-wrap{
+      top: 130px;
+      padding: 0 30px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+  }
+  .sec-tit .wrap .txt-wrap .sub-tit{
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+  }
+  .sec-tit .wrap .txt-wrap h2{
+      font-size: 32px;
+      color: #fff;
+      margin-bottom: 20px;
+  }
+  .sec-tit .wrap .txt-wrap .desc{
+      font-size: 20px;
+      color: #fff;
+  }
+}

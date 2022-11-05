@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="naver-site-verification" content="48afc92b605bc20e8d91af7ced284ffe8ee01604" />
+        <meta name="description" content="한국접근성평가연구원">
+        <meta property="og:type" content="website"> 
+        <meta property="og:title" content="한국접근성평가연구원">
+        <meta property="og:description" content="한국접근성평가연구원">
+        <meta property="og:image" content="https://kcaa.re.kr/images/logo.png">
+        <meta property="og:url" content="www.kcaa.re.kr">
+        <meta
+        name="keywords"
+        content="한국접근성평가연구원, 접근성평가, 접근성, 웹접근성, web accessibility, accessibility, 키오스크접근성, 사용성, 사용성평가, 접근성연구원, 접근성 연구, 키오스크개발, 키오스크평가"
+        />
+        <title>한국접근성평가연구원</title>
+        <link rel="canonical" href="/">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="/common.css">
+        <link rel="stylesheet" href="/app.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/contact.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="/js/main.js"></script>
+    </head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="wrap">
+                <h1><a href="/"><img src="/images/logo.png" alt="한국접근성평가연구원"></a></h1>
+                <nav>
+                    <ul class="navigation">
+                        <li><a href="/accessibilities">접근성소개</a></li>
+                        <li><a href="/center">연구원소개</a></li>
+                        <li><a href="/library">자료실</a></li>
+                        <li class="on"><a href="/contact">문의하기</a></li>
+                    </ul>
+                    <div class="utilities">
+                        {% if user and user.id %}
+                            <div class="sign">
+                                <div>{{'안녕하세요! ' + user.userName + '님'}}</div>
+                                <div class="sign-out"><a href="/auth/logout">로그아웃</a></div>
+                            </div>
+                        {% else %}
+                            <ul class="sign">
+                                <li class="sign-in"><a href="/login">로그인</a></li>
+                                <li class="sign-up"><a href="/join">회원가입</a></li>
+                            </ul>
+                        {% endif %}
+                        <div class="toggle-viewmode" onclick="alert(`서비스 준비중입니다.`)">
+                            <button class="btn-toggle-viewmode"><span class="material-symbols-outlined symbols">bedtime</span>야간모드</button>
+                        </div>
+                    </div>
+                </nav>
+                <button class="btn-nav-opn" onclick="navBtnAnim()">
+                    <span></span>
+                </button>
+                <script>
+                    const navBtnAnim = () => {
+                        const navBtn = document.querySelector(".btn-nav-opn");
+                        const nav = document.querySelector("nav");
+                        navBtn.classList.toggle("active");
+                        nav.classList.toggle("on")
+                    }
+                </script>
+            </div>
+        </header>
+        <div class="sec-tit">
+            <div class="wrap">
+                <div class="txt-wrap">
+                    <p class="sub-tit">GET IN TOUCH</p>
+                    <h2>문의하기</h2>
+                    <div class="desc">
+                        KCAAR의 새로운 소식과 접근성에 관련한 더 자세한 이야기를 살펴보세요.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
+             <section class="sec-contact">
+                 <div class="wrap">
+                    <h3>정보기기 접근성 시험평가 의뢰</h3>
+                    <form id="userRequest" action="/contact/testRequest" method="post">
+                        <div class="client-info">
+                            <h4>의뢰자 정보</h4>
+                            <div class="form-content">
+                                <div class="client-bizname">
+                                    <label for="">업체명<span class="required">*</span></label>
+                                    <input name="clientCompany" id="" type="text" required>
+                                </div>
+                                <div class="client-biznum">
+                                    <label for="">사업자등록번호</label>
+                                    <input name="clientBizNumber" id="" type="number" placeholder="'-'를 뺴고 숫자만 기입">
+                                </div>
+                                <div class="client-address">
+                                    <label for="">주소</label>
+                                    <input name="clientAddress" id="" type="text">
+                                </div>
+                                <div class="client-name">
+                                    <label for="">담당자명<span class="required">*</span></label>
+                                    <input name="clientName" id="" type="text" required>
+                                </div>
+                                <div class="client-num">
+                                    <label for="">담당자 연락처</label>
+                                    <input name="clientPhone" id="" type="tel" placeholder="'-'빼고 입력">
+                                </div>
+                                <div class="client-email">
+                                    <label for="">담당자 Email<span class="required">*</span></label>
+                                    <input name="clientEmail" id="" type="email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="device-info">
+                            <h4>의뢰 기기 정보</h4>
+                            <div class="form-content">
+                                <div class="device-name">
+                                    <label for="">모델명<span class="required">*</span></label>
+                                    <input name="deviceName" id="" type="text" required>
+                                </div>
+                                <div class="device-hardware">
+                                    <h5>하드웨어 정보</h5>
+                                    <div class="device-measure device-measure1">
+                                        <h6>기기 크기<span class="required">*</span></h6>
+                                        <div class="flex-container">
+                                            <input name="deviceMeasureHeight" id="" type="number" min="0" placeholder="높이" required><span class="unit">mm</span>
+                                            <span class="operator">X</span>
+                                            <input name="deviceMeasureWidth" id="" type="number" min="0" placeholder="폭" required><span class="unit">mm</span>
+                                            <span class="operator">X</span>
+                                            <input name="deviceMeasureDepth" id="" type="number" min="0" placeholder="깊이" required><span class="unit">mm</span>
+                                        </div>
+                                    </div>
+                                    <div class="device-measure device-measure2">
+                                        <h6>화면 위치<span class="required">*</span></h6>
+                                        <div class="flex-container">
+                                            <input name="deviceDisplayOffset" id="" type="number" min="0" placeholder="지면-화면하단 거리"><span class="unit">mm</span>
+                                            <span class="operator">X</span>
+                                            <input name="deviceDisplayWidth" id="" type="number" min="0" placeholder="화면 너비" required><span class="unit">mm</span>
+                                            <span class="operator">X</span>
+                                            <input name="deviceDisplayHeight" id="" type="number" min="0" placeholder="화면 높이" required><span class="unit">mm</span>
+                                        </div>
+                                    </div>
+                                    <div class="device-measure device-measure3">
+                                        <h6>물리 조작부 위치<span class="required">*</span></h6>
+                                        <div class="flex-container">
+                                            <input name="deviceControllerHeight" id="" type="number" min="0" placeholder="조작면-지면높이" required><span class="unit">mm</span>
+                                            <span class="operator">X</span>
+                                            <input name="deviceControllerOffset" id="" type="number" min="0" placeholder="화면에서 조작면 돌출 깊이" required><span class="unit">mm</span>
+                                        </div>
+                                    </div>
+                                    <div class="device-measure device-measure4">
+                                        <label for="">물리 버튼 수</label>
+                                        <input name="deviceControllerCounts" id="" type="number" min="0" step="1" required><span class="unit">개</span>
+                                    </div>
+                                </div>
+                                <div class="device-software">
+                                    <h5>소프트웨어 정보</h5>
+                                    <div class="software-name">
+                                        <label for="">소프트웨어 명칭<span class="required">*</span></label>
+                                        <input name="softwareName" type="text" id="" placeholder="예) **대 무인문서발급기" required>
+                                    </div>
+                                    <div class="software-resolution">
+                                        <label for="">화면해상도<span class="required">*</span></label>
+                                        <div class="flex-container">
+                                            <input name="softwareResolutionWidth" id="" type="number" min="0" placeholder="너비" required><span class="unit">px</span>
+                                            <span class="operator">X</span>
+                                            <input name="softwareResolutionHeight" id="" type="number" min="0" placeholder="높이" required><span class="unit">px</span>
+                                        </div>
+                                    </div>
+                                    <div class="software-page-count">
+                                        <label for="">페이지 수<span class="required">*</span></label>
+                                        <input name="softwarePages" type="number" step="1" min="0" id=""><span class="unit">개</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <label for="">요청사항</label>
+                            <textarea name="requestMessage" id="" cols="30" rows="10" placeholder="200자 이내로 작성"></textarea>
+                        </div>
+                        <div class="btns">
+                            <button class="cancel" type="button">취소</button>
+                            <button class="submit" type="submit">문의하기</button>
+                        </div>
+                    </form>
+                 </div>
+             </section>
+             <script>
+                 document.getElementById("userRequest").addEventListener("submit", function() {
+                    
+                 });
+             </script>
+        </main>
+        <footer>
+            <div class="wrap">
+                <div class="ft-menu">
+                    <ul class="ft-nav">
+                        <li><a href="/accessibilities">접근성 소개</a></li>
+                        <li><a href="/center">연구원 소개</a></li>
+                        <li><a href="/library">자료실</a></li>
+                        <li><a href="/contact">문의하기</a></li>
+                    </ul>
+                    <ul class="site-map">
+                        <li><a href="/policy.html" target="_blank">개인정보처리방침</a></li>
+                        <li><a href="#none" onclick="alert(`서비스 준비중입니다.`)">이용약관</a></li>
+                    </ul>
+                </div>
+                <address>
+                    <h2 class="ft-logo"><img src="/images/ft-logo.png" alt=""></h2>
+                    <p>
+                        (사)한국접근성평가연구원 서울 종로구 대학로8길 26, 6층 (동숭동, 예향빌딩)<br>
+                        사업자등록번호 139-82-03219 / 대표자 이성일<br>
+                        COPYRIGHT©KOREA ACCESSIBILITY RESEARCH & EVALUATION ALL RIGHTS RESERVED.
+                    </p>
+                </address>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

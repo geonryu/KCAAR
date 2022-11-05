@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="naver-site-verification" content="48afc92b605bc20e8d91af7ced284ffe8ee01604" />
+        <meta name="description" content="한국접근성평가연구원">
+        <meta property="og:type" content="website"> 
+        <meta property="og:title" content="한국접근성평가연구원">
+        <meta property="og:description" content="한국접근성평가연구원">
+        <meta property="og:image" content="https://kcaa.re.kr/images/logo.png">
+        <meta property="og:url" content="www.kcaa.re.kr">
+        <meta
+        name="keywords"
+        content="한국접근성평가연구원, 접근성평가, 접근성, 웹접근성, web accessibility, accessibility, 키오스크접근성, 사용성, 사용성평가, 접근성연구원, 접근성 연구, 키오스크개발, 키오스크평가"
+        />
+        <title>한국접근성평가연구원</title>
+        <link rel="canonical" href="/">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="/common.css">
+        <link rel="stylesheet" href="/app.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/login.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="/js/main.js"></script>
+    </head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="wrap">
+                <h1><a href="/"><img src="/images/logo.png" alt="한국접근성평가연구원"></a></h1>
+                <nav>
+                    <ul class="navigation">
+                        <li><a href="/accessibilities">접근성소개</a></li>
+                        <li><a href="/center">연구원소개</a></li>
+                        <li><a href="/library">자료실</a></li>
+                        <li><a href="/contact">문의하기</a></li>
+                    </ul>
+                    <div class="utilities">
+                        {% if user and user.id %}
+                            <div class="sign">
+                                <div>{{'안녕하세요! ' + user.userName + '님'}}</div>
+                                <div class="sign-out"><a href="/auth/logout">로그아웃</a></div>
+                            </div>
+                        {% else %}
+                            <ul class="sign">
+                                <li class="sign-in"><a href="/login">로그인</a></li>
+                                <li class="sign-up"><a href="/join">회원가입</a></li>
+                            </ul>
+                        {% endif %}
+                        <div class="toggle-viewmode" onclick="alert(`서비스 준비중입니다.`)">
+                            <button class="btn-toggle-viewmode"><span class="material-symbols-outlined symbols">bedtime</span>야간모드</button>
+                        </div>
+                    </div>
+                </nav>
+                <button class="btn-nav-opn" onclick="navBtnAnim()">
+                    <span></span>
+                </button>
+                <script>
+                    const navBtnAnim = () => {
+                        const navBtn = document.querySelector(".btn-nav-opn");
+                        const nav = document.querySelector("nav");
+                        navBtn.classList.toggle("active");
+                        nav.classList.toggle("on")
+                    }
+                </script>
+            </div>
+        </header>
+        <main>
+            <section class="sec-sign">
+                <div class="wrap">
+                    <form id="login-form" action="/auth/login" method="post">
+                        <h3>로그인</h3>
+                        <div class="input-group input-email">
+                           <label for="email">이메일</label>
+                           <input id="email" type="email" name="email" required autofocus>
+                        </div>
+                        <div class="input-group input-pw">
+                           <label for="password">비밀번호</label>
+                           <input id="password" type="password" name="password" required>
+                        </div>
+                        <button id="login" type="submit" class="btn-sign-in">로그인</button>
+                        <div class="login-social">
+                            <div class="tit">소셜 계정으로 로그인하기</div>
+                            <ul class="social-link">
+                                <li class="login-google">
+                                    <a id="google" href="/auth/google" class="btn">
+                                        <p class="social-icon">
+                                            <img src="/images/ico-social-google.png" alt="">
+                                        </p>
+                                        구글계정으로 로그인하기
+                                    </a>
+                                </li>
+                                <li class="login-kakao">
+                                    <a id="kakao" href="/auth/kakao" class="btn">
+                                        <p class="social-icon">
+                                            <img src="/images/ico-social-kakao.png" alt="">
+                                        </p>
+                                        카카오계정으로 로그인하기
+                                    </a>
+                                </li>
+                                <li class="login-naver">
+                                    <a id="naver" href="/auth/naver" class="btn">
+                                        <p class="social-icon">
+                                            <img src="/images/ico-social-naver.png" alt="">
+                                        </p>
+                                        네이버계정으로 로그인하기
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sign-up">
+                            <a id="join" href="/join" class="btn-sign-up">간편 회원가입하기</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wrap">
+                <div class="ft-menu">
+                    <ul class="ft-nav">
+                        <li><a href="/accessibilities">접근성 소개</a></li>
+                        <li><a href="/center">연구원 소개</a></li>
+                        <li><a href="/library">자료실</a></li>
+                        <li><a href="/contact">문의하기</a></li>
+                    </ul>
+                    <ul class="site-map">
+                        <li><a href="/policy.html" target="_blank">개인정보처리방침</a></li>
+                        <li><a href="#none" onclick="alert(`서비스 준비중입니다.`)">이용약관</a></li>
+                    </ul>
+                </div>
+                <address>
+                    <h2 class="ft-logo"><img src="/images/ft-logo.png" alt=""></h2>
+                    <p>
+                        (사)한국접근성평가연구원 서울 종로구 대학로8길 26, 6층 (동숭동, 예향빌딩)<br>
+                        사업자등록번호 139-82-03219 / 대표자 이성일<br>
+                        COPYRIGHT©KOREA ACCESSIBILITY RESEARCH & EVALUATION ALL RIGHTS RESERVED.
+                    </p>
+                </address>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

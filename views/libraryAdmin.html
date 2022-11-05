@@ -1,0 +1,36 @@
+{% extends 'admin.html' %}
+
+{% block content %}
+  <div class="dashboard">
+    <div class="wrap">
+      <div class="write">
+        <style>.btn-write{display: inline-block; padding: 4px 12px; background-color: #0046d7; color: #fff; font-size: 13px; border-radius: 5px; margin-bottom: 12px;}</style>
+        <a class="btn-write" href="/admin/postAdmin">글쓰기</a>
+      </div>
+      <table class="posts">
+        <tr>
+          <th>카테고리</th>
+          <th>제목</th>
+          <th>작성자</th>
+          <th>작성일</th>
+          <th>관리</th>
+        </tr>
+        {% for post in libraries%}
+          <tr>
+            <td>{{post.category}}</td>
+            <td><a href="/library/{{post.id}}" style="text-decoration: underline; color: #0046d7;" target="_blank">{{post.title}}</a></td>
+            <td>{{post.author}}</td>
+            <td>{{post.createdAt}}</td>
+            <td><button type="button">삭제</button></td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll(".navi li").forEach(function(list) {
+      list.classList.remove("on");
+    })
+    document.querySelector(".navi li:nth-child(2)").classList.add("on");
+  </script>
+{% endblock %}

@@ -1,0 +1,392 @@
+.sec-tit{
+    background-image: url(../images/page-tit-bg-m.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 240px;
+}
+
+.sec-tit .wrap{
+    height: 100%;
+}
+.sec-tit .wrap .txt-wrap{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 0 15px;
+}
+.sec-tit .wrap .txt-wrap .sub-tit{
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+.sec-tit .wrap .txt-wrap h2{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 16px;
+}
+.sec-tit .wrap .txt-wrap .desc{
+    font-size: 14px;
+    color: #fff;
+}
+
+main section h3{
+    margin-bottom: 20px;
+    color: #072a60;
+    text-align: center;
+}
+
+.content-nav{display: none;}
+
+.sec-access-intro{
+    padding: 50px 0;
+}
+
+.sec-access-intro .wrap .content .pic{
+    width: 60%;
+    margin: 0 auto 20px;
+}
+.sec-access-intro .wrap .content .desc{
+    font-size: 14px;
+}
+
+.sec-access-consider{
+    padding-bottom: 50px;
+}
+.sec-access-consider .wrap .content .item{
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #072a60;
+}
+.sec-access-consider .wrap .content .item h4{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.sec-access-consider .wrap .content .item h4 .num{
+    display: block;
+    font-size: 36px;
+    margin-right: 12px;
+    line-height: 1;
+    color: #0046d720;
+}
+.sec-access-consider .wrap .content .item h4 .tit .tit-en{
+    font-size: 12px;
+    font-weight: 600;
+    color: #0046d7;
+    display: block;
+    line-height: 1.2;
+}
+.sec-access-consider .wrap .content .item h4 .tit .tit-ko{
+    font-size: 16px;
+    display: block;
+    line-height: 1.2;
+}
+.sec-access-consider .wrap .content .item .explain{
+    font-size: 14px;
+}
+
+.sec-basic-law{
+    padding: 50px 0;
+    background-color: #eff4fe;
+}
+.sec-basic-law .wrap h3{margin-bottom: 50px;}
+.sec-basic-law .content .row{
+    margin-bottom: 25px; 
+    padding-bottom: 25px;
+    border-bottom: 1px solid #d0d0d0;
+}
+.sec-basic-law .content .row:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.sec-basic-law .content .row .pic{
+    width: 60%;
+    margin: 0 auto 20px;
+}
+.sec-basic-law .content .row .desc{}
+.sec-basic-law .content .row .desc .tit{
+    font-size: 16px;
+    color: #072a60;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.sec-basic-law .content .row .desc .txt{
+    font-size: 14px;
+}
+.sec-basic-law .link-law{
+    font-size: 14px;
+    font-weight: 600;
+    color: #0046d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.sec-basic-law .link-law a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #0046d7;
+    line-height: 1;
+}
+.sec-basic-law .link-law a span{
+    font-size: 20px;
+    display: block;
+}
+
+.sec-access-more{
+    padding: 50px 0;
+}
+.sec-access-more .tit-box{
+    background-color: #072a60;
+    background-image: url(../images/accesmore-tit-bg-m.png);
+    background-size: 100% auto;
+    background-position: center center;
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+.sec-access-more .tit-box h3{
+    color: #fff;
+    text-align: left;
+    margin-bottom: 0;
+}
+.sec-access-more .content{
+    padding-bottom: 20px;
+    overflow: unset;
+}
+.sec-access-more .content .swiper-wrapper{
+    align-items: stretch;
+}
+.sec-access-more .content .box{
+    border: 2px solid #0046d7;
+    border-radius: 20px;
+    max-width: 280px;
+    height: 220px;
+}
+.sec-access-more .content .box a{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+}
+.sec-access-more .content .box a h4{
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #072a60;
+}
+.sec-access-more .content .box a .desc{
+    font-size: 14px;
+}
+.sec-access-more .content .box a .btn-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #0046d7;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-top: auto;
+}
+.sec-access-more .content .box a .btn-link span{
+    font-size: 20px;
+    color: #0046d7;
+    font-weight: 600;
+}
+.sec-access-more .content .swiper-scrollbar .swiper-scrollbar-drag{
+    background-color: #072a60;
+}
+@media all and (min-width: 1130px) {
+    .sec-tit{
+        background-image: url(../images/page-tit-bg-pc.jpg);
+        height: 375px;
+    }
+
+    .sec-tit .wrap .txt-wrap{
+        top: 130px;
+        padding: 0 30px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+    }
+    .sec-tit .wrap .txt-wrap .sub-tit{
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+    }
+    .sec-tit .wrap .txt-wrap h2{
+        font-size: 32px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .sec-tit .wrap .txt-wrap .desc{
+        font-size: 20px;
+        color: #fff;
+    }
+
+    main section h3{
+        margin-bottom: 30px;
+        font-size: 32px;
+    }
+    
+    .sec-access-intro{
+        padding: 80px 0;
+    }
+    
+    .sec-access-intro .wrap .content .pic{
+        width: 340px;
+        margin: 0 auto 50px;
+    }
+    .sec-access-intro .wrap .content .desc{
+        font-size: 18px;
+        text-align: center;
+        max-width: 840px;
+        margin: 0 auto
+    }
+    
+    .sec-access-consider{
+        padding-bottom: 80px;
+    }
+    .sec-access-consider .wrap .content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sec-access-consider .wrap .content .item{
+        padding: 20px;
+        width: calc((100% - 3.125% * 3) / 4);
+        max-width: 290px;
+        margin: 0;
+    }
+    .sec-access-consider .wrap .content .item h4{
+        margin-bottom: 20px;
+    }
+    .sec-access-consider .wrap .content .item h4 .num{
+        font-size: 48px;
+        margin-right: 12px;
+    }
+    .sec-access-consider .wrap .content .item h4 .tit .tit-en{
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 1.2;
+    }
+    .sec-access-consider .wrap .content .item h4 .tit .tit-ko{
+        font-size: 22px;
+        display: block;
+        line-height: 1.1;
+    }
+    .sec-access-consider .wrap .content .item .explain{
+        font-size: 18px;
+    }
+    
+    .sec-basic-law{
+        padding: 80px 0;
+    }
+    .sec-basic-law .wrap h3{margin-bottom: 80px;}
+    .sec-basic-law .content .row{
+        margin-bottom: 0; 
+        padding-bottom: 80px;
+        border-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sec-basic-law .content .row:nth-child(2){
+        flex-direction: row-reverse;
+    }
+    .sec-basic-law .content .row:last-child{margin-bottom: 0;}
+    .sec-basic-law .content .row .pic{
+        width: 620px;
+        margin: 0;
+    }
+    .sec-basic-law .content .row .pic img{
+        width: 400px;
+        margin: 0 auto;
+    }
+    .sec-basic-law .content .row .desc{
+        width: 620px;
+    }
+    .sec-basic-law .content .row .desc .tit{
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .sec-basic-law .content .row .desc .txt{
+        font-size: 18px;
+    }
+    .sec-basic-law .link-law{
+        font-size: 18px;
+        font-weight: 800;
+        margin-top: 80px;
+        color: #072a60;
+    }
+    .sec-basic-law .link-law:hover{color: #0046d7;}
+    .sec-basic-law .link-law a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #0046d7;
+        line-height: 1;
+    }
+    .sec-basic-law .link-law a span{
+        font-size: 24px;
+        margin-left: 4px;
+    }
+
+    .sec-access-more{
+        padding: 80px 0;
+    }
+
+    .sec-access-more .wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sec-access-more .tit-box{
+        background-image: url(../images/accesmore-tit-bg-pc.png);
+        margin-bottom: 0;
+        width: calc((100% - 3.125% * 3) / 4);
+        max-width: 290px;
+        height: 280px;
+    }
+    .sec-access-more .content{
+        padding-bottom: 20px;
+        width: calc(100% - 3.125% - (100% - 3.125% * 3) / 4);
+        margin: 0;
+        overflow: hidden;
+    }
+    .sec-access-more .content .box{
+        height: 280px;
+        max-width: 290px;
+    }
+    .sec-access-more .content .box a{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        height: 100%;
+    }
+    .sec-access-more .content .box a h4{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .sec-access-more .content .box a .desc{
+        font-size: 18px;
+    }
+    .sec-access-more .content .box a .btn-link{
+        width: 35px;
+        height: 35px;
+    }
+    .sec-access-more .content .box a .btn-link span{
+        font-size: 24px;
+        color: #0046d7;
+        font-weight: 600;
+    }
+    .sec-access-more .content .swiper-scrollbar .swiper-scrollbar-drag{
+        background-color: #072a60;
+    }
+}
