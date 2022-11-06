@@ -17,7 +17,7 @@ module.exports = {
   },
   "production": {
     "username": "root",
-    "password": "asdf1020!@QW",
+    "password": "kcaar1020!@",
     "database": "KCAAR",
     "host": "127.0.0.1",
     "dialect": "mysql"
