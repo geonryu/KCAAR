@@ -4,7 +4,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": "asdf1020!@QW",
-    "database": "board-test",
+    "database": "KCAAR",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -17,7 +17,7 @@ module.exports = {
   },
   "production": {
     "username": "root",
-    "password": "kcaar1020!@",
+    "password": "asdf1020!@QW",
     "database": "KCAAR",
     "host": "127.0.0.1",
     "dialect": "mysql"
