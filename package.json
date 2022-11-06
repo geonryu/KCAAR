@@ -4,7 +4,7 @@
   "description": "kcaar",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=poduction PORT=8080 pm2 start app.js",
+    "start": "NODE_ENV=poduction PORT=80 pm2 start app.js",
     "dev": "nodemon server",
     "test": "jest"
   },
