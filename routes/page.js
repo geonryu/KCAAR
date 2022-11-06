@@ -67,21 +67,6 @@ router.get('/', async (req, res, next) => {
   res.render('main', {
     title: 'NodeBird',
   });
-  // try {
-  //   const posts = await Post.findAll({
-  //     include: {
-  //       model: User,
-  //       attributes: ['id'],
-  //     },
-  //     order: [['createdAt', 'DESC']],
-  //   });
-  //   res.render('main', {
-  //     title: 'NodeBird',
-  //     // twits: posts,
-  //   });
-  // } catch (err) {
-  //   next(err);
-  // }
 });
 
 module.exports = router;
