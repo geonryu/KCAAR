@@ -67,8 +67,8 @@ const sessionOption = {
 };
 if(process.env.NODE_ENV === "production"){
   sessionOption.proxy = true;
-  // sessionOption.cookie.secure = true;
-  // app.enable('trust proxy');
+  sessionOption.cookie.secure = true;
+  app.enable('trust proxy');
   app.use(morgan('combined'));
   app.use(helmet());
   app.use(hpp());
